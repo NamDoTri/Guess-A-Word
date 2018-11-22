@@ -19,25 +19,25 @@
             }
             document.getElementById("secretWord").innerHTML = guessedChar.join(" ");
             document.getElementById("test").innerHTML = keyWord;
-
-            function handleInputButtons(buttonPressed)
+            //document.getElementById("numberGuesses").innerHTML = "The number of guesses you have taken: " + numberGuesses;
+        }
+        function handleInputButtons(buttonPressed)
+        {
+            if (guessedChar.indexOf("-") != -1)
             {
-                if (guessedChar.indexOf("-") != -1)
-                {
-                    numberGuesses ++;
-                }
-                document.getElementById("numberGuesses").innerHTML = "The number of guesses you have taken: " + numberGuesses;
-                
-                var selectedChar = buttonPressed.textContent;
-                for ( charIndex in guessedChar)
-                {
-                    if ( keyWord.charAt(charIndex) == selectedChar)
-                    {
-                        guessedChar[ charIndex ] = selectedChar;
-                    }
-                }
-                document.getElementById("secretWord").innerHTML = "" + guessedChar.join(" ");
+                numberGuesses ++;
             }
+            document.getElementById("numberGuesses").innerHTML = "The number of guesses you have taken: " + numberGuesses;
+            
+            var selectedChar = buttonPressed.textContent;
+            for ( charIndex in guessedChar)
+            {
+                if ( keyWord.charAt(charIndex) == selectedChar)
+                {
+                    guessedChar[ charIndex ] = selectedChar;
+                }
+            }
+            document.getElementById("secretWord").innerHTML = "" + guessedChar.join(" ");
         }
     </script>
 </head>
@@ -52,14 +52,14 @@
 
         </div>
         <script>
-            var alphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+            const alphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
             'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'W',
             'X', 'Y', 'Z' ] ;
-            for ( let i = 0; i < alphabet.length; i ++)
+            for ( var i = 0; i < alphabet.length; i ++)
             {
-                document.write("<button onclick=\"handleInputButtons( this )\">" + alphabet[i] + "</button>");
+                document.write("<button onclick=\"handleInputButtons( this )\">" + alphabet[ i ] + "</button>");
             }
-            //document.getElementById("secretWord").innerHTML = guessedChar.join(" ");
+            document.getElementById("secretWord").innerHTML = guessedChar.join(" ");
         </script>
         <div id="numberGuesses"></div>
         <p id="test"></p>
