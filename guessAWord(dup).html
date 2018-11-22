@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="GuessAWordLayout.css">
+    <title>Guess A Word</title>
+    <script>
+        const wordsBeGuessed = ["VIENNA", "HELSINKI", "COPENHAGEN", "LONDON", "BERLIN", "AMSTERDAM"];
+        
+        function initializeGame()
+        {
+            var guessedChar = [];
+            var keyWord = wordsBeGuessed[Math.floor(Math.random()*wordsBeGuessed.length)];
+            var numberGuesses = 0;
+
+
+            for (let i = 0; i < keyWord.length; i++)
+            {
+                guessedChar.push("-");
+            }
+            document.getElementById("secretWord").innerHTML = guessedChar.join(" ");
+            document.getElementById("test").innerHTML = keyWord;
+
+            function handleInputButtons(buttonPressed)
+            {
+                if (guessedChar.indexOf("-") != -1)
+                {
+                    numberGuesses ++;
+                }
+                document.getElementById("numberGuesses").innerHTML = "The number of guesses you have taken: " + numberGuesses;
+                
+                var selectedChar = buttonPressed.textContent;
+                for ( charIndex in guessedChar)
+                {
+                    if ( keyWord.charAt(charIndex) == selectedChar)
+                    {
+                        guessedChar[ charIndex ] = selectedChar;
+                    }
+                }
+                document.getElementById("secretWord").innerHTML = "" + guessedChar.join(" ");
+            }
+        }
+    </script>
+</head>
+<body onload="initializeGame()">
+    <div class=centered>
+        <div class="centered">
+            <h1>Hello! This is a guessing game.</h1>
+            <p>Each hyphen sign '-' below hides a letter of a word.</p>
+            <p>Try to find out the word by pressing the buttons!</p>
+
+            <p id="secretWord"></p>
+
+        </div>
+        <script>
+            var alphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+            'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'W',
+            'X', 'Y', 'Z' ] ;
+            for ( let i = 0; i < alphabet.length; i ++)
+            {
+                document.write("<button onclick=\"handleInputButtons( this )\">" + alphabet[i] + "</button>");
+            }
+            //document.getElementById("secretWord").innerHTML = guessedChar.join(" ");
+        </script>
+        <div id="numberGuesses"></div>
+        <p id="test"></p>
+
+    </div>
+</body>
+</html>
