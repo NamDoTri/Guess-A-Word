@@ -4,9 +4,6 @@ body
     background-image: url(landscape-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
-.centered
-{
     text-align: center;
 }
 
