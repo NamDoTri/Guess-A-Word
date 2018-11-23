@@ -22,7 +22,7 @@ function handleButtons(pressedButton)
 {
     var selectedLetter = pressedButton.textContent; 
     
-    if (guessedLetters.indexOf('-') != -1)
+    if (guessedLetters.indexOf('-') != -1 && guessedLetters.indexOf(selectedLetter) == -1)
     {
         numberGuesses++;
     }
