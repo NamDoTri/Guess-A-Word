@@ -1,0 +1,10 @@
+body
+{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-image: url(junfeng-gao-1162041-unsplash.jpg);
+    background-size: cover;
+}
+.centered
+{
+    text-align: center;
+}

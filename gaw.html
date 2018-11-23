@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guess a word</title>
+    <title>Guess a City</title>
+    <link rel="stylesheet" type="text/css" href="GuessAWordLayout.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
     <script type="text/javascript" src="initScript.js"></script>
 </head>
 <body onload="initializeGame()">
@@ -21,6 +23,8 @@
                 document.write("<button onclick=\"handleButtons(this)\">" + keyboard[i] + "</button>" );
             }
         </script>
+        <!------------------------------>
+
         <div id="numberGuesses"></div>
         <div id="congrats"></div>
 
