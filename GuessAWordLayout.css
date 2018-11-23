@@ -7,10 +7,38 @@ body
     text-align: center;
 }
 
+#secretWord
+{
+    font-size: 150%;
+    
+    border: 2px solid black;
+    width: 325px;
+    margin: auto;
+}
+
+.Buttons
+{
+    border-radius: 7px;
+    border: 2px solid white;
+
+    background: none;
+    cursor: pointer;
+    font-size: 150%;
+
+}
+.Buttons:hover{
+    background-color: white;
+}
+
 @media only screen and (max-width: 450px)
 {
     body
     {
         background-image: url(portrait-background.jpg);
+    }
+    .Buttons
+    {
+        font-size: 130%;
+
     }
 }

@@ -11,21 +11,21 @@
     <div class="centered">
         <h1>Hello!</h1>
         <p>This is a guessing game.</p>
-        <p>Each hyphen '-' here hides a character. Your goal is try to guess the whole word.</p>
+        <p>Each hyphen '-' here hides a character. Your goal is try to guess the whole word, which is the name of a city.</p>
         <p>Press the buttons to guess:</p>
 
         <div id="secretWord"></div> <!--this is where the hyphens appear-->
-
+        <br>&nbsp;
         <!--Generate on-screen keyboard-->
         <script>
             const keyboard = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K','L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'W','X', 'Y', 'Z'];
             for (let i = 0; i < keyboard.length; i ++)
             {
-                document.write("<button onclick=\"handleButtons(this)\">" + keyboard[i] + "</button>" );
+                document.write("<button class=\"Buttons\" onclick=\"handleButtons(this)\">" + keyboard[i] + "</button>" );
             }
         </script>
         <!------------------------------>
-
+        <br>&nbsp;
         <div id="numberGuesses"></div>
         <div id="congrats"></div>
 
