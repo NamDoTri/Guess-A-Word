@@ -12,7 +12,7 @@ body
     font-size: 150%;
     
     border: 2px solid black;
-    width: 325px;
+    width: 305px;
     margin: auto;
 }
 
@@ -21,11 +21,12 @@ body
     width: 35px;
     border-radius: 7px;
     border: 2px solid white;
+    outline: none;
 
     background: none;
     cursor: pointer;
     font-size: 150%;
-
+    color: white;
 }
 .Buttons:hover{
     background-color: white;
@@ -38,9 +39,28 @@ body
 }
 #numberGuesses
 {
-    color: white;
+    margin-left: 220px;
 }
-
+#newGame
+{
+    margin-top: 10px;
+    outline: none;
+    width: auto;
+    color: black;
+    background-color:white;
+}
+#newGame:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 0 5px gray; 
+}
+#newGame:active
+{
+    background-color: rgb(228, 228, 228);
+    border-color: rgb(228,228,228);
+    transform: translateY(3px);
+    box-shadow: none;
+}
 @media only screen and (max-width: 450px)
 {
     body
@@ -54,5 +74,14 @@ body
         width: auto;
         color: white;
 
+    }
+    @media only screen and (min-width: 240px) and (max-width: 350px)
+    {
+        #secretWord
+        {
+            border-color: white;
+            color: white;
+            font-weight: bold;
+        }
     }
 }

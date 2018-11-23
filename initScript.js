@@ -16,7 +16,7 @@ function initializeGame()
         guessedLetters.push('-');
     }
     document.getElementById("secretWord").innerHTML = guessedLetters.join(" ");
-    document.getElementById("numberGuesses").innerHTML = "The number of guesses you have taken: " + numberGuesses;
+    document.getElementById("numberGuesses").innerHTML = "Guesses: " + numberGuesses;
 }
 function handleButtons(pressedButton)
 {
@@ -41,6 +41,6 @@ function handleButtons(pressedButton)
         document.getElementById("newGame").style.display = "";
     }
     document.getElementById("secretWord").innerHTML = guessedLetters.join(" ");
-    document.getElementById("numberGuesses").innerHTML = "The number of guesses you have taken: " + numberGuesses;
+    document.getElementById("numberGuesses").innerHTML = "Guesses: " + numberGuesses;
 }
 
