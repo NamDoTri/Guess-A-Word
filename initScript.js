@@ -1,4 +1,4 @@
-const wordsList = ["VIENNA", "HELSINKI", "COPENHAGEN", "LONDON", "BERLIN", "AMSTERDAM"];
+const wordsList = ["VIENNA", "HELSINKI", "COPENHAGEN", "LONDON", "BERLIN", "AMSTERDAM", "OULU", "HANOI", "CANBERRA", "STOCKHOLM"];
 var guessedLetters = [];
 var keyword = "";
 var numberGuesses = 0;
